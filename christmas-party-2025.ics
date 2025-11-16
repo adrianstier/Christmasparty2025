@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Christmas Party 2025//EN
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20251213T150000
+DTEND:20251213T200000
+DTSTAMP:20241116T000000Z
+ORGANIZER;CN=Party Host:mailto:host@example.com
+UID:christmas-party-2025@example.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:guest@example.com
+CREATED:20241116T000000Z
+DESCRIPTION:Join us for our Christmas Party 2025!\n\n🎄 DATE: Saturday\, December 13\, 2025\n🕒 TIME: 3:00 PM - 8:00 PM\n📍 LOCATION: 5339 Agana Dr\, Santa Barbara\, CA 93111\n\n👨‍👩‍👧‍👦 BRING YOUR SIGNIFICANT OTHER AND KIDS!\nThis is a family-friendly celebration!\n\nWhat to bring:\n• Just yourselves - we've got everything covered!\n• Optional: Kids' pajamas (so they can get cozy if needed)\n\nWhat we'll provide:\n• Festive food and drinks for all ages\n• Kid-friendly activities and entertainment\n• Everything you need for a great time!\n\nWhat to expect:\n• Great company and conversation\n• Holiday cheer and celebration!\n• Fun for the whole family\n\nPlease RSVP by December 6\, 2025 so we can get an accurate headcount.\n\nLet us know:\n• How many adults attending\n• How many kids attending\n• Any dietary restrictions\n\nWe can't wait to celebrate with you and your family!\n\nQuestions? Contact the host.
+LAST-MODIFIED:20241116T000000Z
+LOCATION:5339 Agana Dr\, Santa Barbara\, CA 93111
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Christmas Party 2025 🎄
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Reminder: Christmas Party tomorrow!
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
