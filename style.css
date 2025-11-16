@@ -1676,6 +1676,31 @@ footer {
     color: var(--text-primary);
 }
 
+.tiki-template {
+    background: linear-gradient(135deg, #FF6B6B 0%, #F59E0B 25%, #10B981 50%, #3B82F6 75%, #EC4899 100%);
+    color: var(--text-inverse);
+    position: relative;
+    overflow: hidden;
+}
+
+.tiki-template::before {
+    content: '🌴🍹🎄🌺';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+}
+
+.tiki-template::after {
+    content: '✨🥥🎅🏝️';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+}
+
 /* Guest Invitation Status */
 .guest-invitation-status {
     margin-bottom: var(--space-12);
@@ -1914,5 +1939,150 @@ footer {
 
     .method-options {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   POOLSIDE PLANNING GUIDE
+   ============================================ */
+
+.poolside-guide-section {
+    margin-top: var(--space-16);
+    padding: var(--space-12);
+    background: var(--bg-gradient);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+}
+
+.poolside-guide-section .page-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.poolside-guide-section .page-header h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: var(--font-black);
+    color: var(--primary-red);
+    margin-bottom: var(--space-2);
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: var(--space-8);
+}
+
+.guide-card {
+    background: var(--gradient-card);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
+}
+
+.guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-2xl);
+}
+
+.guide-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.guide-icon {
+    font-size: var(--text-4xl);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.guide-header h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--primary-green);
+    margin: 0;
+}
+
+.guide-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.guide-subsection {
+    background: rgba(255, 255, 255, 0.5);
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary-red);
+}
+
+.guide-subsection h4 {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.guide-subsection ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.guide-subsection li {
+    padding: var(--space-2) 0;
+    padding-left: var(--space-6);
+    position: relative;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.guide-subsection li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    top: var(--space-2);
+    font-size: var(--text-sm);
+}
+
+.guide-subsection li strong {
+    color: var(--text-primary);
+    font-weight: var(--font-semibold);
+}
+
+/* Responsive for guide grid */
+@media (max-width: 1200px) {
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .poolside-guide-section {
+        padding: var(--space-6);
+    }
+
+    .guide-card {
+        padding: var(--space-6);
+    }
+
+    .guide-header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .poolside-guide-section .page-header h2 {
+        font-size: var(--text-3xl);
     }
 }

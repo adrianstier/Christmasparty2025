@@ -44,6 +44,24 @@
             color: var(--text-primary);
         }
 
+        .invitation-tiki {
+            background: linear-gradient(135deg, #FF6B6B 0%, #F59E0B 25%, #10B981 50%, #3B82F6 75%, #EC4899 100%);
+            color: var(--text-inverse);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .invitation-tiki::before {
+            content: '🌴 🍹 🎄 🌺 ✨ 🥥 🎅 🏝️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 6rem;
+            opacity: 0.1;
+            white-space: nowrap;
+        }
+
         .invitation-icon {
             font-size: 5rem;
             margin-bottom: var(--space-6);
@@ -186,11 +204,11 @@
             <div class="invitation-details">
                 <div class="detail-row">
                     <span class="detail-icon">📅</span>
-                    <span id="event-date">December 20, 2025</span>
+                    <span id="event-date">December 13, 2025</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-icon">⏰</span>
-                    <span id="event-time">6:00 PM</span>
+                    <span id="event-time">3:00 PM</span>
                 </div>
                 <div class="detail-row">
                     <span class="detail-icon">📍</span>

@@ -12,8 +12,8 @@ function loadInvitationFromURL() {
 
     // Get invitation details from URL
     const title = params.get('title') || 'Christmas Party 2025';
-    const date = params.get('date') || '2025-12-20';
-    const time = params.get('time') || '18:00';
+    const date = params.get('date') || '2025-12-13';
+    const time = params.get('time') || '15:00';
     const venue = params.get('venue') || '123 Holiday Lane, North Pole';
     const message = params.get('message') || 'Join us for a magical evening of celebration, joy, and festive cheer!';
     const template = params.get('template') || 'elegant';
@@ -60,7 +60,8 @@ function applyTemplate(template) {
         elegant: { icon: '🎄', class: 'invitation-elegant' },
         festive: { icon: '🎅', class: 'invitation-festive' },
         modern: { icon: '✨', class: 'invitation-modern' },
-        winter: { icon: '❄️', class: 'invitation-winter' }
+        winter: { icon: '❄️', class: 'invitation-winter' },
+        tiki: { icon: '🌺', class: 'invitation-tiki' }
     };
 
     const selectedTemplate = templates[template] || templates.elegant;

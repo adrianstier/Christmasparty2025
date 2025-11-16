@@ -24,6 +24,11 @@ const templates = {
         name: 'Winter Wonderland',
         icon: '❄️',
         bgClass: 'invitation-winter'
+    },
+    tiki: {
+        name: 'Holiday Tiki Luxe',
+        icon: '🌺',
+        bgClass: 'invitation-tiki'
     }
 };
 
