@@ -23,7 +23,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 2. Susie Family - (805) 252-9828
@@ -38,7 +38,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 3. Erika Family - (707) 334-5404
@@ -53,7 +53,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 4. Bealers Family - (617) 678-9990
@@ -68,7 +68,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 5. Jaimes Family - (415) 279-0565
@@ -83,7 +83,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 6. Lees Family - (541) 790-1096
@@ -98,7 +98,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 7. Santoros Family - (650) 269-9792
@@ -113,7 +113,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 8. Lizzie's Family - (203) 858-8229
@@ -128,7 +128,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 9. Char - (845) 905-6531
@@ -143,7 +143,7 @@ Bring your significant other - it's going to be a great celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 10. Liv - (804) 997-9146
@@ -158,7 +158,7 @@ Bring your significant other - it's going to be a great celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 11. Alex's Family - (415) 271-1191
@@ -173,7 +173,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ### 12. Dan's Family - (415) 847-5700
@@ -188,7 +188,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by Dec 6 - Just reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 ```
 
 ---
@@ -208,7 +208,7 @@ Bring your significant other and kids - it's a family-friendly celebration!
 
 Please RSVP by December 6th - Reply YES or NO
 
-Download calendar invite: [LINK TO BE ADDED]
+Download calendar invite: https://raw.githubusercontent.com/adrianstier/Christmasparty2025/claude/organize-guest-list-01RVMDxkqqAzs84BzWNX8e9T/christmas-party-2025.ics
 
 Looking forward to seeing you there!
 ```
