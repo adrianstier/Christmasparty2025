@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitations - Christmas Party 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🎄 Christmas Party 2025</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guests.html">Guest List</a></li>
+                <li><a href="invitations.html" class="active">Invitations</a></li>
+                <li><a href="checklist.html">Checklist</a></li>
+                <li><a href="planning.html">Planning</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Digital Invitations</h2>
+            <button onclick="showCreateInvitationModal()" class="btn-primary">+ Create Invitation</button>
+        </section>
+
+        <!-- Invitation Stats -->
+        <section class="invitation-stats">
+            <div class="stat-card">
+                <div class="stat-icon">📧</div>
+                <div class="stat-info">
+                    <h4>Sent</h4>
+                    <p class="stat-value" id="invites-sent">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <h4>Accepted</h4>
+                    <p class="stat-value success" id="invites-accepted">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-info">
+                    <h4>Pending</h4>
+                    <p class="stat-value warning" id="invites-pending">0</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">❌</div>
+                <div class="stat-info">
+                    <h4>Declined</h4>
+                    <p class="stat-value danger" id="invites-declined">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Invitation -->
+        <section class="current-invitation" id="current-invitation-section" style="display: none;">
+            <h3>Current Invitation</h3>
+            <div class="invitation-display">
+                <div class="invitation-preview" id="invitation-preview">
+                    <!-- Preview will be loaded here -->
+                </div>
+                <div class="invitation-actions">
+                    <button onclick="editInvitation()" class="btn-primary">Edit Details</button>
+                    <button onclick="showSendInvitationModal()" class="btn-primary">Send to Guests</button>
+                    <button onclick="previewInvitation()" class="btn-secondary">Full Preview</button>
+                    <button onclick="deleteInvitation()" class="action-btn delete">Delete</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Template Gallery -->
+        <section class="template-gallery">
+            <h3>Choose a Template</h3>
+            <div class="templates-grid">
+                <div class="template-card" onclick="selectTemplate('elegant')">
+                    <div class="template-preview elegant-template">
+                        <h4>🎄</h4>
+                        <p>Elegant Christmas</p>
+                        <small>Classic & Sophisticated</small>
+                    </div>
+                    <button class="btn-secondary">Use Template</button>
+                </div>
+                <div class="template-card" onclick="selectTemplate('festive')">
+                    <div class="template-preview festive-template">
+                        <h4>🎅</h4>
+                        <p>Festive Fun</p>
+                        <small>Bright & Cheerful</small>
+                    </div>
+                    <button class="btn-secondary">Use Template</button>
+                </div>
+                <div class="template-card" onclick="selectTemplate('modern')">
+                    <div class="template-preview modern-template">
+                        <h4>✨</h4>
+                        <p>Modern Minimalist</p>
+                        <small>Clean & Contemporary</small>
+                    </div>
+                    <button class="btn-secondary">Use Template</button>
+                </div>
+                <div class="template-card" onclick="selectTemplate('winter')">
+                    <div class="template-preview winter-template">
+                        <h4>❄️</h4>
+                        <p>Winter Wonderland</p>
+                        <small>Snowy & Magical</small>
+                    </div>
+                    <button class="btn-secondary">Use Template</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guest Invitation Status -->
+        <section class="guest-invitation-status">
+            <h3>Guest Responses</h3>
+            <div class="filter-bar">
+                <input type="text" id="search-invitations" placeholder="Search guests..." class="search-input">
+                <select id="filter-status" class="filter-select">
+                    <option value="all">All Statuses</option>
+                    <option value="sent">Sent</option>
+                    <option value="accepted">Accepted</option>
+                    <option value="declined">Declined</option>
+                    <option value="pending">Pending</option>
+                </select>
+            </div>
+
+            <div class="guest-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Guest</th>
+                            <th>Contact</th>
+                            <th>Method</th>
+                            <th>Status</th>
+                            <th>Response Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invitation-status-body">
+                        <tr class="no-data">
+                            <td colspan="6">Create an invitation to get started!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Create Invitation Modal -->
+    <div id="create-invitation-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeCreateInvitationModal()">&times;</span>
+            <h3>Create Your Invitation</h3>
+            <form id="create-invitation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Event Title *</label>
+                        <input type="text" id="event-title" value="Christmas Party 2025" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Template *</label>
+                        <select id="invitation-template" required>
+                            <option value="elegant">Elegant Christmas</option>
+                            <option value="festive">Festive Fun</option>
+                            <option value="modern">Modern Minimalist</option>
+                            <option value="winter">Winter Wonderland</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date *</label>
+                        <input type="date" id="event-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time *</label>
+                        <input type="time" id="event-time" value="18:00" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Venue *</label>
+                    <input type="text" id="event-venue" placeholder="123 Holiday Lane, North Pole" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Message to Guests</label>
+                    <textarea id="event-message" rows="4" placeholder="Join us for a magical evening of celebration, joy, and festive cheer!"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Dress Code</label>
+                        <input type="text" id="dress-code" placeholder="Festive Attire">
+                    </div>
+                    <div class="form-group">
+                        <label>RSVP Deadline</label>
+                        <input type="date" id="rsvp-deadline">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Special Instructions</label>
+                    <textarea id="special-instructions" rows="3" placeholder="Parking info, gift preferences, etc."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Create Invitation</button>
+                    <button type="button" onclick="closeCreateInvitationModal()" class="btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Send Invitation Modal -->
+    <div id="send-invitation-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeSendInvitationModal()">&times;</span>
+            <h3>Send Invitations</h3>
+
+            <div class="send-options">
+                <div class="guest-selection">
+                    <h4>Select Guests</h4>
+                    <div class="select-all-option">
+                        <label>
+                            <input type="checkbox" id="select-all-guests" onchange="toggleSelectAll()">
+                            Select All Guests
+                        </label>
+                    </div>
+                    <div class="guest-checklist" id="guest-checklist">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="delivery-method">
+                    <h4>Delivery Method</h4>
+                    <div class="method-options">
+                        <label class="method-option">
+                            <input type="radio" name="delivery-method" value="auto" checked>
+                            <div class="method-card">
+                                <span class="method-icon">🤖</span>
+                                <strong>Auto-Select</strong>
+                                <small>Email if available, SMS otherwise</small>
+                            </div>
+                        </label>
+                        <label class="method-option">
+                            <input type="radio" name="delivery-method" value="email">
+                            <div class="method-card">
+                                <span class="method-icon">📧</span>
+                                <strong>Email Only</strong>
+                                <small>Send to guests with email</small>
+                            </div>
+                        </label>
+                        <label class="method-option">
+                            <input type="radio" name="delivery-method" value="sms">
+                            <div class="method-card">
+                                <span class="method-icon">💬</span>
+                                <strong>SMS Only</strong>
+                                <small>Send to guests with phone</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="send-preview">
+                    <h4>Preview Message</h4>
+                    <div class="preview-tabs">
+                        <button class="preview-tab active" onclick="switchPreviewTab('email')">Email Preview</button>
+                        <button class="preview-tab" onclick="switchPreviewTab('sms')">SMS Preview</button>
+                    </div>
+                    <div id="email-preview" class="preview-content">
+                        <div class="email-mockup">
+                            <div class="email-header">
+                                <strong>Subject:</strong> You're Invited! Christmas Party 2025 🎄
+                            </div>
+                            <div class="email-body" id="email-preview-body">
+                                <!-- Generated preview -->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sms-preview" class="preview-content" style="display: none;">
+                        <div class="sms-mockup">
+                            <div class="sms-bubble" id="sms-preview-body">
+                                <!-- Generated preview -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button onclick="sendInvitations()" class="btn-primary">Send Invitations</button>
+                <button onclick="closeSendInvitationModal()" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Christmas Party Planning Central. Made with ❤️ and festive cheer!</p>
+    </footer>
+
+    <script src="invitations.js"></script>
+</body>
+</html>

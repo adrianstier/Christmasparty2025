@@ -16,6 +16,36 @@ A comprehensive web-based party planning application to help you organize the pe
 - **Search & Filter**: Easily find guests by name, email, or phone
 - **Filter by RSVP**: View guests by their response status
 
+### 💌 Digital Invitations (Paperless Post Style)
+- **Beautiful Templates**: Choose from 4 stunning invitation designs:
+  - Elegant Christmas (Classic & Sophisticated)
+  - Festive Fun (Bright & Cheerful)
+  - Modern Minimalist (Clean & Contemporary)
+  - Winter Wonderland (Snowy & Magical)
+- **Invitation Builder**: Create custom invitations with:
+  - Event details (date, time, venue)
+  - Personal message to guests
+  - Dress code and RSVP deadline
+  - Special instructions
+- **Multi-Channel Delivery**:
+  - Email invitations with beautiful HTML templates
+  - SMS text message invitations
+  - Auto-select (email if available, SMS otherwise)
+- **Send Management**:
+  - Select individual guests or send to all
+  - Preview invitations before sending
+  - Track sent status for each guest
+- **Public RSVP Page**:
+  - Beautiful responsive invitation display
+  - Easy RSVP form for guests (Accept/Decline)
+  - Guest count and dietary restrictions
+  - Optional message to host
+- **Response Tracking**:
+  - Real-time RSVP statistics
+  - Automatic guest list updates
+  - View guest messages
+  - Resend invitations as needed
+
 ### ✅ Checklist
 - **Categorized Tasks**: Organized by:
   - Venue & Logistics

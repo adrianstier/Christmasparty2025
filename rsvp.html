@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - Christmas Party 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional RSVP-specific styles */
+        .rsvp-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-4);
+        }
+
+        .invitation-display-full {
+            background: var(--gradient-card);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-12);
+            box-shadow: var(--shadow-2xl);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: var(--space-12);
+            text-align: center;
+        }
+
+        .invitation-elegant {
+            background: linear-gradient(135deg, #7C2D12 0%, #991B1B 50%, #065F46 100%);
+            color: var(--text-inverse);
+        }
+
+        .invitation-festive {
+            background: linear-gradient(135deg, #DC2626 0%, #F59E0B 50%, #10B981 100%);
+            color: var(--text-inverse);
+        }
+
+        .invitation-modern {
+            background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+            color: var(--text-primary);
+            border: 3px solid var(--primary-red);
+        }
+
+        .invitation-winter {
+            background: linear-gradient(135deg, #DBEAFE 0%, #E0F2FE 50%, #F0F9FF 100%);
+            color: var(--text-primary);
+        }
+
+        .invitation-icon {
+            font-size: 5rem;
+            margin-bottom: var(--space-6);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .invitation-title {
+            font-family: var(--font-heading);
+            font-size: var(--text-5xl);
+            font-weight: var(--font-black);
+            margin-bottom: var(--space-4);
+            letter-spacing: -1px;
+        }
+
+        .invitation-details {
+            margin: var(--space-8) 0;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-3);
+            margin: var(--space-4) 0;
+            font-size: var(--text-lg);
+        }
+
+        .detail-icon {
+            font-size: var(--text-2xl);
+        }
+
+        .invitation-message {
+            font-size: var(--text-xl);
+            line-height: 1.8;
+            margin: var(--space-8) 0;
+            padding: var(--space-6);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            backdrop-filter: blur(10px);
+        }
+
+        .rsvp-form-section {
+            background: var(--gradient-card);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-10);
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .rsvp-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        .rsvp-option {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .rsvp-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .rsvp-option-card {
+            padding: var(--space-8);
+            border: 3px solid var(--accent-silver);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: all var(--transition-base);
+            background: var(--bg-primary);
+        }
+
+        .rsvp-option input[type="radio"]:checked + .rsvp-option-card {
+            border-color: var(--primary-green);
+            background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .rsvp-option input[type="radio"]:checked + .rsvp-option-card.decline {
+            border-color: var(--danger);
+            background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+        }
+
+        .rsvp-option-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-4);
+        }
+
+        .rsvp-option-title {
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            margin-bottom: var(--space-2);
+        }
+
+        .success-message {
+            text-align: center;
+            padding: var(--space-12);
+        }
+
+        .success-icon {
+            font-size: 6rem;
+            margin-bottom: var(--space-6);
+            animation: bounceIn 0.8s ease-out;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .rsvp-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rsvp-container">
+        <!-- Invitation Display -->
+        <div class="invitation-display-full" id="invitation-card">
+            <div class="invitation-icon" id="invitation-icon">🎄</div>
+            <h1 class="invitation-title">You're Invited!</h1>
+            <h2 class="invitation-subtitle" id="event-title">Christmas Party 2025</h2>
+
+            <div class="invitation-details">
+                <div class="detail-row">
+                    <span class="detail-icon">📅</span>
+                    <span id="event-date">December 20, 2025</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-icon">⏰</span>
+                    <span id="event-time">6:00 PM</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-icon">📍</span>
+                    <span id="event-venue">123 Holiday Lane, North Pole</span>
+                </div>
+                <div class="detail-row" id="dress-code-row" style="display: none;">
+                    <span class="detail-icon">👔</span>
+                    <span id="dress-code"></span>
+                </div>
+            </div>
+
+            <div class="invitation-message" id="event-message">
+                Join us for a magical evening of celebration, joy, and festive cheer!
+            </div>
+
+            <div class="detail-row" id="rsvp-deadline-row" style="display: none;">
+                <span class="detail-icon">⏳</span>
+                <span>Please RSVP by <strong id="rsvp-deadline"></strong></span>
+            </div>
+        </div>
+
+        <!-- RSVP Form -->
+        <div class="rsvp-form-section" id="rsvp-form-section">
+            <h3 style="text-align: center; margin-bottom: var(--space-8);">Please Respond</h3>
+
+            <form id="rsvp-form">
+                <div class="form-group">
+                    <label>Your Name *</label>
+                    <input type="text" id="guest-name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="guest-email" placeholder="your@email.com">
+                </div>
+
+                <div class="rsvp-options">
+                    <label class="rsvp-option">
+                        <input type="radio" name="rsvp-response" value="accept" required>
+                        <div class="rsvp-option-card accept">
+                            <div class="rsvp-option-icon">🎉</div>
+                            <div class="rsvp-option-title">Accept</div>
+                            <p>I'll be there!</p>
+                        </div>
+                    </label>
+
+                    <label class="rsvp-option">
+                        <input type="radio" name="rsvp-response" value="decline">
+                        <div class="rsvp-option-card decline">
+                            <div class="rsvp-option-icon">😔</div>
+                            <div class="rsvp-option-title">Decline</div>
+                            <p>Can't make it</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div id="accept-fields" style="display: none;">
+                    <div class="form-group">
+                        <label>Number of Guests</label>
+                        <select id="guest-count">
+                            <option value="1">Just me</option>
+                            <option value="2">Me + 1 guest</option>
+                            <option value="3">Me + 2 guests</option>
+                            <option value="4">Me + 3 guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dietary Restrictions</label>
+                        <input type="text" id="dietary-restrictions" placeholder="e.g., Vegetarian, Gluten-free, None">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Message (Optional)</label>
+                    <textarea id="guest-message" rows="3" placeholder="Leave a message for the host..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary btn-full-width">Submit RSVP</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Success Message (hidden initially) -->
+        <div class="rsvp-form-section success-message" id="success-message" style="display: none;">
+            <div class="success-icon">✨</div>
+            <h2 style="margin-bottom: var(--space-4);">Thank You!</h2>
+            <p style="font-size: var(--text-xl); color: var(--text-secondary);" id="success-text">
+                Your RSVP has been received. We look forward to celebrating with you!
+            </p>
+            <button onclick="location.reload()" class="btn-secondary" style="margin-top: var(--space-8);">
+                Update Response
+            </button>
+        </div>
+
+        <!-- Special Instructions (if any) -->
+        <div class="rsvp-form-section" id="special-instructions-section" style="display: none; margin-top: var(--space-8);">
+            <h4 style="margin-bottom: var(--space-4);">Important Information</h4>
+            <p id="special-instructions" style="color: var(--text-secondary); line-height: 1.8;"></p>
+        </div>
+    </div>
+
+    <footer style="margin-top: var(--space-20);">
+        <p>&copy; 2025 Christmas Party Planning Central. Made with ❤️ and festive cheer!</p>
+    </footer>
+
+    <script src="rsvp.js"></script>
+</body>
+</html>
