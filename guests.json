@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Sample Guest 1",
+    "email": "guest1@example.com",
+    "phone": "+1-234-567-8901",
+    "rsvp": "pending",
+    "dietaryRestrictions": "",
+    "plusOne": false
+  },
+  {
+    "id": 2,
+    "name": "Sample Guest 2",
+    "email": "guest2@example.com",
+    "phone": "+1-234-567-8902",
+    "rsvp": "confirmed",
+    "dietaryRestrictions": "Vegetarian",
+    "plusOne": true
+  }
+]

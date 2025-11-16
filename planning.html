@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning - Christmas Party 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🎄 Christmas Party 2025</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guests.html">Guest List</a></li>
+                <li><a href="checklist.html">Checklist</a></li>
+                <li><a href="planning.html" class="active">Planning</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Party Planning Dashboard</h2>
+        </section>
+
+        <div class="planning-grid">
+            <!-- Budget Tracker -->
+            <section class="budget-section">
+                <h3>💰 Budget Tracker</h3>
+                <div class="budget-summary">
+                    <div class="budget-item">
+                        <span class="label">Total Budget:</span>
+                        <span class="value">$<span id="total-budget">0</span></span>
+                        <button onclick="editBudget()" class="edit-btn-small">Edit</button>
+                    </div>
+                    <div class="budget-item">
+                        <span class="label">Spent:</span>
+                        <span class="value spent">$<span id="total-spent">0</span></span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="label">Remaining:</span>
+                        <span class="value remaining">$<span id="remaining-budget">0</span></span>
+                    </div>
+                </div>
+
+                <div class="budget-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill budget-fill" id="budget-progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p class="progress-text" id="budget-progress-text">0% of budget used</p>
+                </div>
+
+                <button onclick="showAddExpenseModal()" class="btn-primary btn-full-width">+ Add Expense</button>
+
+                <div class="expenses-list">
+                    <h4>Expenses Breakdown</h4>
+                    <table class="expense-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenses-table-body">
+                            <tr class="no-data">
+                                <td colspan="4">No expenses yet. Add your first expense above!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Timeline -->
+            <section class="timeline-section">
+                <h3>📅 Planning Timeline</h3>
+                <button onclick="showAddMilestoneModal()" class="btn-primary btn-full-width">+ Add Milestone</button>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">3 Months Before</div>
+                        <div class="timeline-content">
+                            <h4>Initial Planning</h4>
+                            <ul>
+                                <li>Set date and budget</li>
+                                <li>Create guest list</li>
+                                <li>Research and book venue</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2 Months Before</div>
+                        <div class="timeline-content">
+                            <h4>Invitations & Vendors</h4>
+                            <ul>
+                                <li>Send save-the-dates</li>
+                                <li>Book caterer and entertainment</li>
+                                <li>Order decorations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1 Month Before</div>
+                        <div class="timeline-content">
+                            <h4>Confirmations</h4>
+                            <ul>
+                                <li>Send formal invitations</li>
+                                <li>Confirm vendor bookings</li>
+                                <li>Finalize menu and activities</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2 Weeks Before</div>
+                        <div class="timeline-content">
+                            <h4>Final Details</h4>
+                            <ul>
+                                <li>Follow up on RSVPs</li>
+                                <li>Finalize head count</li>
+                                <li>Confirm dietary requirements</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1 Week Before</div>
+                        <div class="timeline-content">
+                            <h4>Last Preparations</h4>
+                            <ul>
+                                <li>Final vendor confirmations</li>
+                                <li>Prepare party favors</li>
+                                <li>Create setup schedule</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Day Before</div>
+                        <div class="timeline-content">
+                            <h4>Setup Day</h4>
+                            <ul>
+                                <li>Decorate venue</li>
+                                <li>Set up tables and seating</li>
+                                <li>Test equipment (sound, lights)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item highlight">
+                        <div class="timeline-date">Party Day! 🎉</div>
+                        <div class="timeline-content">
+                            <h4>Enjoy the Celebration!</h4>
+                            <ul>
+                                <li>Early setup completion</li>
+                                <li>Welcome guests</li>
+                                <li>Have an amazing time!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Notes Section -->
+        <section class="notes-section">
+            <h3>📝 Planning Notes</h3>
+            <textarea id="planning-notes" placeholder="Add your planning notes, ideas, and reminders here..." rows="8"></textarea>
+            <button onclick="saveNotes()" class="btn-primary">Save Notes</button>
+        </section>
+    </main>
+
+    <!-- Add Expense Modal -->
+    <div id="add-expense-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddExpenseModal()">&times;</span>
+            <h3>Add Expense</h3>
+            <form id="add-expense-form">
+                <div class="form-group">
+                    <label>Category *</label>
+                    <select id="expense-category" required>
+                        <option value="">Select category...</option>
+                        <option value="Venue">Venue</option>
+                        <option value="Food & Catering">Food & Catering</option>
+                        <option value="Beverages">Beverages</option>
+                        <option value="Decorations">Decorations</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Invitations">Invitations</option>
+                        <option value="Party Favors">Party Favors</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description *</label>
+                    <input type="text" id="expense-description" required>
+                </div>
+                <div class="form-group">
+                    <label>Amount ($) *</label>
+                    <input type="number" id="expense-amount" step="0.01" min="0" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Add Expense</button>
+                    <button type="button" onclick="closeAddExpenseModal()" class="btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Milestone Modal -->
+    <div id="add-milestone-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddMilestoneModal()">&times;</span>
+            <h3>Add Timeline Milestone</h3>
+            <form id="add-milestone-form">
+                <div class="form-group">
+                    <label>Date/Timeframe *</label>
+                    <input type="text" id="milestone-date" placeholder="e.g., 1 Week Before" required>
+                </div>
+                <div class="form-group">
+                    <label>Title *</label>
+                    <input type="text" id="milestone-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Tasks (one per line)</label>
+                    <textarea id="milestone-tasks" rows="4" placeholder="Enter tasks, one per line"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Add Milestone</button>
+                    <button type="button" onclick="closeAddMilestoneModal()" class="btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Christmas Party Planning Central. Made with ❤️ and festive cheer!</p>
+    </footer>
+
+    <script src="planning.js"></script>
+</body>
+</html>

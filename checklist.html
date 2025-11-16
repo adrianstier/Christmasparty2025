@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist - Christmas Party 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🎄 Christmas Party 2025</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guests.html">Guest List</a></li>
+                <li><a href="checklist.html" class="active">Checklist</a></li>
+                <li><a href="planning.html">Planning</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Party Planning Checklist</h2>
+            <button onclick="showAddTaskModal()" class="btn-primary">+ Add Task</button>
+        </section>
+
+        <section class="checklist-progress">
+            <h3>Overall Progress</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+            <p class="progress-text" id="progress-text">0 of 0 tasks completed (0%)</p>
+        </section>
+
+        <section class="checklist-categories">
+            <div class="category-section">
+                <h3>📋 Venue & Logistics</h3>
+                <ul class="task-list" id="venue-tasks">
+                    <li class="task-item">
+                        <input type="checkbox" id="task-venue-1" onchange="updateProgress()">
+                        <label for="task-venue-1">Book venue</label>
+                        <button onclick="deleteTask('venue-1')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-venue-2" onchange="updateProgress()">
+                        <label for="task-venue-2">Arrange seating layout</label>
+                        <button onclick="deleteTask('venue-2')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-venue-3" onchange="updateProgress()">
+                        <label for="task-venue-3">Confirm parking arrangements</label>
+                        <button onclick="deleteTask('venue-3')" class="delete-task">×</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category-section">
+                <h3>🎵 Entertainment</h3>
+                <ul class="task-list" id="entertainment-tasks">
+                    <li class="task-item">
+                        <input type="checkbox" id="task-ent-1" onchange="updateProgress()">
+                        <label for="task-ent-1">Book DJ or create playlist</label>
+                        <button onclick="deleteTask('ent-1')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-ent-2" onchange="updateProgress()">
+                        <label for="task-ent-2">Plan games and activities</label>
+                        <button onclick="deleteTask('ent-2')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-ent-3" onchange="updateProgress()">
+                        <label for="task-ent-3">Organize Secret Santa gift exchange</label>
+                        <button onclick="deleteTask('ent-3')" class="delete-task">×</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category-section">
+                <h3>🍽️ Food & Beverages</h3>
+                <ul class="task-list" id="food-tasks">
+                    <li class="task-item">
+                        <input type="checkbox" id="task-food-1" onchange="updateProgress()">
+                        <label for="task-food-1">Choose caterer or menu</label>
+                        <button onclick="deleteTask('food-1')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-food-2" onchange="updateProgress()">
+                        <label for="task-food-2">Confirm dietary restrictions</label>
+                        <button onclick="deleteTask('food-2')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-food-3" onchange="updateProgress()">
+                        <label for="task-food-3">Order beverages and bar supplies</label>
+                        <button onclick="deleteTask('food-3')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-food-4" onchange="updateProgress()">
+                        <label for="task-food-4">Arrange dessert and cake</label>
+                        <button onclick="deleteTask('food-4')" class="delete-task">×</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category-section">
+                <h3>🎨 Decorations</h3>
+                <ul class="task-list" id="decoration-tasks">
+                    <li class="task-item">
+                        <input type="checkbox" id="task-dec-1" onchange="updateProgress()">
+                        <label for="task-dec-1">Purchase Christmas decorations</label>
+                        <button onclick="deleteTask('dec-1')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-dec-2" onchange="updateProgress()">
+                        <label for="task-dec-2">Set up Christmas tree</label>
+                        <button onclick="deleteTask('dec-2')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-dec-3" onchange="updateProgress()">
+                        <label for="task-dec-3">Arrange lighting and ambiance</label>
+                        <button onclick="deleteTask('dec-3')" class="delete-task">×</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category-section">
+                <h3>📧 Invitations & Communication</h3>
+                <ul class="task-list" id="communication-tasks">
+                    <li class="task-item">
+                        <input type="checkbox" id="task-comm-1" onchange="updateProgress()">
+                        <label for="task-comm-1">Send save-the-date notices</label>
+                        <button onclick="deleteTask('comm-1')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-comm-2" onchange="updateProgress()">
+                        <label for="task-comm-2">Send formal invitations</label>
+                        <button onclick="deleteTask('comm-2')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-comm-3" onchange="updateProgress()">
+                        <label for="task-comm-3">Follow up on RSVPs</label>
+                        <button onclick="deleteTask('comm-3')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-comm-4" onchange="updateProgress()">
+                        <label for="task-comm-4">Send final details and reminders</label>
+                        <button onclick="deleteTask('comm-4')" class="delete-task">×</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category-section">
+                <h3>📸 Photography & Memories</h3>
+                <ul class="task-list" id="photo-tasks">
+                    <li class="task-item">
+                        <input type="checkbox" id="task-photo-1" onchange="updateProgress()">
+                        <label for="task-photo-1">Book photographer or designate someone</label>
+                        <button onclick="deleteTask('photo-1')" class="delete-task">×</button>
+                    </li>
+                    <li class="task-item">
+                        <input type="checkbox" id="task-photo-2" onchange="updateProgress()">
+                        <label for="task-photo-2">Set up photo booth area</label>
+                        <button onclick="deleteTask('photo-2')" class="delete-task">×</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Task Modal -->
+    <div id="add-task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddTaskModal()">&times;</span>
+            <h3>Add New Task</h3>
+            <form id="add-task-form">
+                <div class="form-group">
+                    <label>Task Description *</label>
+                    <input type="text" id="task-description" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="task-category">
+                        <option value="venue">Venue & Logistics</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="food">Food & Beverages</option>
+                        <option value="decoration">Decorations</option>
+                        <option value="communication">Invitations & Communication</option>
+                        <option value="photo">Photography & Memories</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Add Task</button>
+                    <button type="button" onclick="closeAddTaskModal()" class="btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Christmas Party Planning Central. Made with ❤️ and festive cheer!</p>
+    </footer>
+
+    <script src="checklist.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Party 2025 - Planning Central</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🎄 Christmas Party 2025</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="guests.html">Guest List</a></li>
+                <li><a href="checklist.html">Checklist</a></li>
+                <li><a href="planning.html">Planning</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to Christmas Party 2025 Planning Central</h2>
+            <p class="subtitle">Your one-stop destination for organizing the perfect holiday celebration</p>
+        </section>
+
+        <section class="party-details">
+            <h3>Party Details</h3>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="icon">📅</span>
+                    <h4>Date</h4>
+                    <p id="party-date">December 20, 2025</p>
+                    <button onclick="editDetail('date')" class="edit-btn">Edit</button>
+                </div>
+                <div class="detail-card">
+                    <span class="icon">⏰</span>
+                    <h4>Time</h4>
+                    <p id="party-time">6:00 PM - 11:00 PM</p>
+                    <button onclick="editDetail('time')" class="edit-btn">Edit</button>
+                </div>
+                <div class="detail-card">
+                    <span class="icon">📍</span>
+                    <h4>Venue</h4>
+                    <p id="party-venue">TBD</p>
+                    <button onclick="editDetail('venue')" class="edit-btn">Edit</button>
+                </div>
+                <div class="detail-card">
+                    <span class="icon">👥</span>
+                    <h4>Expected Guests</h4>
+                    <p id="guest-count">0 confirmed</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-stats">
+            <h3>Quick Overview</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h4>Tasks Completed</h4>
+                    <p class="stat-number" id="tasks-completed">0/0</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Budget Status</h4>
+                    <p class="stat-number" id="budget-status">$0 / $0</p>
+                </div>
+                <div class="stat-box">
+                    <h4>Days Until Party</h4>
+                    <p class="stat-number" id="days-until">-</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <h3>Recent Updates</h3>
+            <ul id="activity-list">
+                <li>Party planning website created!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Christmas Party Planning Central. Made with ❤️ and festive cheer!</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
